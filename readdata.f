@@ -306,8 +306,8 @@ c      close(21)
 c     print out d_tau for simulation data
       
       open(22, file=dtaufile, status='unknown')    !dtau file
-      write(22, * ) 'VARIABLES = frequency,radius,angle,dtau,
-     &dtau_ism, diff_tau'
+      write(22, * ) 'VARIABLES = frequency,radius,angle,dtau,'//
+     &'dtau_ism, diff_tau'
       write(22, 702) fn,ie-is+1,jep1-js+1
       do j=js,jep1
         th=(j-js)*5.0d0-2.5d0   ! double float
@@ -338,7 +338,7 @@ c     print out d_tau for simulation data
 703   format('ZONE I=',i4,', J=',i4,', K=',i4,', F=',i4)
 704   format('ZONE I=',i4,', J=',i4)
 712   format(3f10.3,1e11.4,2e11.4,4e12.4,1e11.4)  !add e12.4 for 3D
-713   format(4(1pe12.4))
+713   format(6(1pe12.4))
 714   format(1pe14.6,4(1pe12.4))
 715   format(i5,1pe12.4)
 716   format(1pe14.6,6(1pe12.4))
