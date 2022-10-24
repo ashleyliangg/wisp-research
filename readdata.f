@@ -149,6 +149,7 @@ c    x = r(i)*cos(th)
 c    y = r(i)*sin(th)
 c ====================================================================
 
+c !!!NO LONGER USING THE COMMENTED OUT CODE BELOW BECAUSE BELOW DOESN'T TAKE FREQUENCY INTO ACCOUNT!!!
 c CALCULATE COLUMN DENSITY WITHOUT CONSIDERING FREQUENCY
 c       base_dens = d(ie,js)
 
